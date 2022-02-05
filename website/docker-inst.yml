@@ -4,7 +4,7 @@
   tasks:
     - name: installa dipendenze
       apt:
-        name: "{{item}}"
+        name: "{{ item }}"
         state: present
         update_cache: yes
         loop:
@@ -23,7 +23,7 @@
         state: present
     - name: installa docker
       apt:
-       name: "{{item}}"
+       name: "{{ item }}"
        state: latest
        update_cache: yes
        loop:
