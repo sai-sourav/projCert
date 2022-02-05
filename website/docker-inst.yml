@@ -4,10 +4,10 @@
   tasks:
     - name: installa dipendenze
       apt:
-        name: "{{ item }}"
+        name: "{{item}}"
         state: present
         update_cache: yes
-        loop:
+      loop:
           - apt-transport-https
           - ca-certificates
           - curl
@@ -23,10 +23,10 @@
         state: present
     - name: installa docker
       apt:
-       name: "{{ item }}"
+       name: "{{item}}"
        state: latest
        update_cache: yes
-       loop:
+      loop:
          - docker-ce
          - docker-ce-cli
          - containerd.io
