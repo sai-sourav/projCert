@@ -1,5 +1,6 @@
 ---
-- hosts: all
+- name: install docker
+  hosts: all
   become: yes
   vars:
     DOCKER_COMPOSE_VERSION: "1.25.1"
@@ -9,7 +10,7 @@
       - curl
       - gnupg-agent
       - software-properties-common
-  USER: "devops"
+    USER: "devops"
 
   tasks:
    - name: Update apt packages
