@@ -1,6 +1,6 @@
 ---
 - name: copying the script to the remote server and execute
-  hosts: testserver
+  hosts: Test-server
   become: yes
   tasks:
     - name: transfer executable script
